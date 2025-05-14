@@ -5,14 +5,15 @@ const style = {
 }
 
 
-export const CharacterCard = ({ id, name}) => {
+export const VehicleCard = ({ id, name}) => {
     return (
         <>
         <div className="card" style={style}>
-            <img src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/people/${id}.jpg?raw=true`} className="card-img-top" alt="..." />
+            <img src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/vehicles/${id}.jpg?raw=true`} className="card-img-top" alt="..." />
             <div className="card-body">
-                <div className="d-flex">
-                        <Link to={`/profile-page/people/${id}`}>
+                <h5 className="card-title">{name}</h5>
+                    <div className="d-flex">
+                        <Link to={`/profile-page/vehicle/${id}`}>
                             <div className="bt1 me-4">
                                 <button href="#" className="btn btn-primary">Learn More</button>
                             </div>

@@ -5,14 +5,14 @@ const style = {
 }
 
 
-export const CharacterCard = ({ id, name}) => {
+export const PlanetsCard = ({ id, name}) => {
     return (
         <>
         <div className="card" style={style}>
-            <img src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/people/${id}.jpg?raw=true`} className="card-img-top" alt="..." />
+            <img src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/planets/${id}.jpg?raw=true`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <div className="d-flex">
-                        <Link to={`/profile-page/people/${id}`}>
+                        <Link to={`/profile-page/planet/${id}`}>
                             <div className="bt1 me-4">
                                 <button href="#" className="btn btn-primary">Learn More</button>
                             </div>

@@ -1,7 +1,7 @@
 export const PeopleProfilePage = () => {
     return (
         <>
-        profile card
+        People profile card
         </>
     )
 }
