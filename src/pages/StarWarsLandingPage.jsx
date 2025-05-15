@@ -8,8 +8,6 @@ import { PlanetsCardList } from "../components/PlanetsCardList";
 export const StarWarsLandingPage = () => {
     const { store, dispatch } = useGlobalReducer();
 
-
-
     useEffect(() =>  {
         fetchAllPeople(dispatch);
         fetchAllVehicles(dispatch);
@@ -46,6 +44,7 @@ export const StarWarsLandingPage = () => {
                     <h2 className="text-danger">Planets</h2>
                     <PlanetsCardList 
                         allplanets={store.allPlanets}
+                        dispatch={dispatch}
                     
                     />
                 </div>

@@ -38,6 +38,29 @@ export default function storeReducer(store, action = {}) {
           ...store,
           allVehicles: [...vehiclesArray]
         }
+      case 'favedProfile':
+        {
+        const { id, name } = action.payload;
+
+        const filteredArray = store.favorites.filter(favorite => favorite.name !== name)
+
+        return {
+          ...store,
+          favorites: [...filteredArray, {id: id, name: name}]
+        }
+
+      }
+        case 'removedFavorite':
+        {
+          const { name } = action.payload;
+
+          const filteredArray = store.favorites.filter(favorite => favorite.name !== name)
+
+          return {
+            ...store,
+            favorites: [...filteredArray]
+          }
+        }
     default:
       throw Error('Unknown action.');
   }    
