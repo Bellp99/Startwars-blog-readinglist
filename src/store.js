@@ -7,6 +7,7 @@ export const initialStore=()=>{
       singlePlanet: [],
       singleVehicle: [],
       favorites: []
+      
   }
 }
 
@@ -26,6 +27,12 @@ export default function storeReducer(store, action = {}) {
           ...store,
           allPeople: [...peopleArray]
         }
+      case 'FetchSinglePerson':
+        const singlepersonArray = action.payload;
+        return{
+          ...store,
+          singlePerson: [...singlepersonArray]
+        }
       case 'fetchedAllPlanets':
         const planetsArray = action.payload;
         return{
@@ -38,7 +45,7 @@ export default function storeReducer(store, action = {}) {
           ...store,
           allVehicles: [...vehiclesArray]
         }
-      case 'favedProfile':
+      case 'favedProfile': 
         {
         const { id, name } = action.payload;
 
@@ -61,6 +68,7 @@ export default function storeReducer(store, action = {}) {
             favorites: [...filteredArray]
           }
         }
+
     default:
       throw Error('Unknown action.');
   }    

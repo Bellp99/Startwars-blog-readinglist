@@ -1,6 +1,29 @@
 const baseURL = 'https://www.swapi.tech/api'
 
 
+export const FetchSinglePerson = async (dispatch, id) => {
+    try {
+        const response = await fetch(`${baseURL}/people/${id}`) ;          
+        if (!response.ok){
+            throw new Error(response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+        dispatch(
+            {
+                type: 'fetchedsinglePerson',
+                payload: data.results.properties,
+            }
+        );
+        return data;  
+        
+    }
+    catch (error) {
+        console.log("Error getting Star Wars person Attributes!", error)
+    }
+    
+}
+
 export const fetchAllPeople = async (dispatch) => {
     try {
         const response = await fetch(`${baseURL}/people`) ;          
@@ -16,12 +39,14 @@ export const fetchAllPeople = async (dispatch) => {
             }
         );
         return data;  
+        
     }
     catch (error) {
         console.log("Error get Star Wars people profiles!", error)
     }
     
 }
+
 
 export const fetchAllPlanets = async(dispatch) => {
             try {

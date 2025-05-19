@@ -22,7 +22,6 @@ export const StarWarsLandingPage = () => {
                     <h2 className="text-danger">Characters</h2>
                     <CharacterCardList 
                         allpeople={store.allPeople}
-                    
                     />
                 </div>
                 <div className="col-1"></div>

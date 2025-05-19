@@ -7,7 +7,7 @@ const style = {
 }
 
 
-export const CharacterCard = ({ id, name }) => {
+export const CharacterCard = ({ id, name, gender, hair_color }) => {
 
     const { dispatch } = useGlobalReducer()
     
@@ -16,7 +16,11 @@ export const CharacterCard = ({ id, name }) => {
         <div className="card" style={style}>
             <img src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/people/${id}.jpg?raw=true`} className="card-img-top" alt="..." />
             <div className="card-body">
+                <div className="attributos">
                 <h5 className="card-title">{name}</h5>
+                <h4 className="card-body">{gender}</h4>
+                <h4 className="card-body">{hair_color}</h4>
+                </div>
                 <div className="d-flex justify-content-between">
                         <Link to={`/profile-page/people/${id}`}>
                             <div className="bt1">
