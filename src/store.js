@@ -4,8 +4,8 @@ export const initialStore=()=>{
       allPlanets: [],
       allVehicles: [],
       singlePerson: {},
-      singlePlanet: [],
-      singleVehicle: [],
+      singlePlanet: {},
+      singleVehicle: {},
       favorites: []
       
   }
@@ -13,17 +13,32 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+
+        case 'FetchSinglePerson':
+          return{
+            ...store,
+            singlePerson: action.payload
+          }
+
+              case 'FetchSinglePlanet':
+          return{
+            ...store,
+            singlePlanet: action.payload
+          }
+
+                case 'FetchSingleVehicle':
+          return{
+            ...store,
+            singleVehicle: action.payload
+          }
+
       case 'fetchedAllPeople':
         const peopleArray = action.payload;
         return{
           ...store,
           allPeople: [...peopleArray]
         }
-      case 'FetchSinglePerson':
-        return{
-          ...store,
-          singlePerson: action.payload
-        }
+
       case 'fetchedAllPlanets':
         const planetsArray = action.payload;
         return{

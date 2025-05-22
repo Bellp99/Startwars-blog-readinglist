@@ -20,8 +20,10 @@ export const PeopleProfilePage = () => {
         <>
             <div className="row my-5">
                 <div className="col-1"></div>
-                <div className="col-10">
-                    <h2 className="text-danger">Characters</h2>
+                <div className="col-5">
+                <img src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/people/${uid}.jpg?raw=true`} className="card-img-top" alt="..." width={75} height={400}/>
+                </div>
+                <div className="col-5">
                     <CharacterProperties 
                         singleperson={store.singlePerson}
                     />

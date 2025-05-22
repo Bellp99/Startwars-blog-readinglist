@@ -1,6 +1,6 @@
 import { CharacterCard } from "./CharacterCard"
 
-export const CharacterCardList = ({ allpeople, dispatch }) => {
+export const CharacterCardList = ({ allpeople, singleperson, dispatch }) => {
     return (
         <>
             <div className="row d-flex flex-nowrap overflow-auto">
@@ -12,8 +12,6 @@ export const CharacterCardList = ({ allpeople, dispatch }) => {
                             id={person.uid}
                             name={person.name}
                             dispatch={dispatch}
-
-
 
                         />
                         );

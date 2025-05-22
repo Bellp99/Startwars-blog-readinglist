@@ -24,6 +24,53 @@ export const FetchSinglePerson = async (dispatch, id) => {
     
 }
 
+export const FetchSinglePlanet = async (dispatch, id) => {
+    try {
+        const response = await fetch(`${baseURL}/people/${id}`) ;          
+        if (!response.ok){
+            throw new Error(response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+        dispatch(
+            {
+                type: 'FetchSinglePlanet',
+                payload: data.result.properties,
+            }
+        );
+        return data;  
+        
+    }
+    catch (error) {
+        console.log("Error getting planet Attributes!", error)
+    }
+    
+}
+
+export const FetchSingleVehicle = async (dispatch, id) => {
+    try {
+        const response = await fetch(`${baseURL}/people/${id}`) ;          
+        if (!response.ok){
+            throw new Error(response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+        dispatch(
+            {
+                type: 'FetchSingleVehicle',
+                payload: data.result.properties,
+            }
+        );
+        return data;  
+        
+    }
+    catch (error) {
+        console.log("Error getting single vehicle Attributes!", error)
+    }
+    
+}
+
+
 export const fetchAllPeople = async (dispatch) => {
     try {
         const response = await fetch(`${baseURL}/people`) ;          

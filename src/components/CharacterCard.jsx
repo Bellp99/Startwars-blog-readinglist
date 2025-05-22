@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer";
 
-
 const style = {
     width: "18rem",
 }
@@ -18,8 +17,6 @@ export const CharacterCard = ({ id, name, gender, hair_color }) => {
             <div className="card-body">
                 <div className="attributos">
                 <h5 className="card-title">{name}</h5>
-                <h4 className="card-body">{gender}</h4>
-                <h4 className="card-body">{hair_color}</h4>
                 </div>
                 <div className="d-flex justify-content-between">
                         <Link to={`/profile-page/people/${id}`}>

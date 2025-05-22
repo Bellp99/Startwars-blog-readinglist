@@ -1,4 +1,4 @@
-export const CharacterProperties = ({ singleperson }) => {
+export const VehicleProperties = ({ singlevehicle }) => {
  //  if (!singleperson || !singleperson.properties) {
   //     return <p>Loading character data...</p>;
   //  }
@@ -13,7 +13,7 @@ export const CharacterProperties = ({ singleperson }) => {
         eye_color,
         skin_color,
         homeworld,
-    } = singleperson;
+    } = singlevehicle;
 
     return (
         <div className="card p-4 shadow-sm">
