@@ -11,8 +11,8 @@ export const FetchSinglePerson = async (dispatch, id) => {
         console.log(data);
         dispatch(
             {
-                type: 'fetchedsinglePerson',
-                payload: data.results.properties,
+                type: 'FetchSinglePerson',
+                payload: data.result.properties,
             }
         );
         return data;  

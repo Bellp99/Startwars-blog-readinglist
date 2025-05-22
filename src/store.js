@@ -3,7 +3,7 @@ export const initialStore=()=>{
       allPeople: [],
       allPlanets: [],
       allVehicles: [],
-      singlePerson: [],
+      singlePerson: {},
       singlePlanet: [],
       singleVehicle: [],
       favorites: []
@@ -13,14 +13,6 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
-    //case 'add_task':
-
-    //  const { id,  color } = action.payload
-
-    //  return {
-      //  ...store,
-      //  todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      //};
       case 'fetchedAllPeople':
         const peopleArray = action.payload;
         return{
@@ -28,10 +20,9 @@ export default function storeReducer(store, action = {}) {
           allPeople: [...peopleArray]
         }
       case 'FetchSinglePerson':
-        const singlepersonArray = action.payload;
         return{
           ...store,
-          singlePerson: [...singlepersonArray]
+          singlePerson: action.payload
         }
       case 'fetchedAllPlanets':
         const planetsArray = action.payload;

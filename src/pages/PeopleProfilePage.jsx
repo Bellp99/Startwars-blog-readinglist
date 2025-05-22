@@ -9,13 +9,11 @@ import { CharacterProperties } from "../components/CharacterProperties";
 export const PeopleProfilePage = () => {
     const { store, dispatch } = useGlobalReducer();
 
-    const { id } = useParams(); // 👈 get id from route
+    const { uid } = useParams(); // 👈 get id from route
 
     useEffect(() => {
-        if (id) {
-            FetchSinglePerson(id, dispatch); // 👈 pass id to fetch function
-        }
-    }, [id]);
+          FetchSinglePerson(dispatch, uid); // 👈 pass id to fetch function
+    }, []);
 
 
     return (

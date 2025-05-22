@@ -1,7 +1,7 @@
 export const CharacterProperties = ({ singleperson }) => {
- //   if (!singleperson || !singleperson.properties) {
- //       return <p>Loading character data...</p>;
- //   }
+ //  if (!singleperson || !singleperson.properties) {
+  //     return <p>Loading character data...</p>;
+  //  }
 
     const {
         name,
@@ -17,7 +17,7 @@ export const CharacterProperties = ({ singleperson }) => {
         films,
         vehicles,
         starships,
-    } = singleperson.properties;
+    } = singleperson;
 
     return (
         <div className="card p-4 shadow-sm">
