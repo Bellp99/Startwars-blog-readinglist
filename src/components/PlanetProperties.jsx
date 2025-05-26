@@ -5,12 +5,15 @@ export const PlanetProperties = ({ singleplanet }) => {
 
     const {
         name,
-        created,
         edited,
+        created,
         climate,
         surface_water,
         diameter,
         rotation_period,
+        terrain,
+        gravity,
+        orbital_period,
         population,
         
     } = singleplanet;
@@ -19,14 +22,16 @@ export const PlanetProperties = ({ singleplanet }) => {
         <div className="card p-4 shadow-sm">
             <h3 className="text-danger">{name}</h3>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item"><strong>Birth Year:</strong> {created}</li>
-                <li className="list-group-item"><strong>Gender:</strong> {gender}</li>
-                <li className="list-group-item"><strong>Height:</strong> {height} cm</li>
-                <li className="list-group-item"><strong>Mass:</strong> {mass} kg</li>
-                <li className="list-group-item"><strong>Hair Color:</strong> {hair_color}</li>
-                <li className="list-group-item"><strong>Eye Color:</strong> {eye_color}</li>
-                <li className="list-group-item"><strong>Skin Color:</strong> {skin_color}</li>
-                <li className="list-group-item"><strong>Homeworld:</strong> {homeworld}</li>
+                <li className="list-group-item"><strong>Created:</strong> {created}</li>
+                <li className="list-group-item"><strong>Edited:</strong> {edited}</li>
+                <li className="list-group-item"><strong>Climate:</strong> {climate} </li>
+                <li className="list-group-item"><strong>Surface water:</strong> {surface_water} </li>
+                <li className="list-group-item"><strong>Rotation period:</strong> {rotation_period}</li>
+                <li className="list-group-item"><strong>Diameter:</strong> {diameter}</li>
+                <li className="list-group-item"><strong>Terrain</strong> {terrain}</li>
+                <li className="list-group-item"><strong>Gravity:</strong> {gravity}</li>
+                <li className="list-group-item"><strong>Orbital period:</strong> {orbital_period}</li>
+                <li className="list-group-item"><strong>Population:</strong> {population}</li>
             </ul>
         </div>
     );

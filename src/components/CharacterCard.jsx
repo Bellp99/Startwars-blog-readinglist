@@ -6,7 +6,7 @@ const style = {
 }
 
 
-export const CharacterCard = ({ id, name, gender, hair_color }) => {
+export const CharacterCard = ({ id, name }) => {
 
     const { dispatch } = useGlobalReducer()
     
@@ -27,6 +27,7 @@ export const CharacterCard = ({ id, name, gender, hair_color }) => {
                         <div className="btn2">
                             <button 
                                 type="button" 
+                                data-bs-toggle="button"
                                 className="btn btn-outline-danger"
                                 onClick={() => dispatch({
                                     type: 'favedProfile',

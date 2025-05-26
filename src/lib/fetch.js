@@ -1,4 +1,4 @@
-const baseURL = 'https://www.swapi.tech/api'
+const baseURL = 'https://www.swapi.tech/api/'
 
 
 export const FetchSinglePerson = async (dispatch, id) => {
@@ -26,7 +26,7 @@ export const FetchSinglePerson = async (dispatch, id) => {
 
 export const FetchSinglePlanet = async (dispatch, id) => {
     try {
-        const response = await fetch(`${baseURL}/people/${id}`) ;          
+        const response = await fetch(`${baseURL}/planets/${id}`) ;          
         if (!response.ok){
             throw new Error(response.status);
         }
@@ -49,7 +49,7 @@ export const FetchSinglePlanet = async (dispatch, id) => {
 
 export const FetchSingleVehicle = async (dispatch, id) => {
     try {
-        const response = await fetch(`${baseURL}/people/${id}`) ;          
+        const response = await fetch(`${baseURL}/vehicles/${id}`) ;          
         if (!response.ok){
             throw new Error(response.status);
         }

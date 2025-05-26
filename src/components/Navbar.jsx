@@ -23,7 +23,8 @@ export const Navbar = () => {
 										return (
 											<li key={`${favorite.id}${favorite.name}`} className="d-flex justify-content-between">
 												<Link className="dropdown-item" to={`/profile-page/people/${favorite.id}`}>
-													{favorite.name} 
+													{
+													favorite.name} 
 												</Link>
 												<svg xmlns="http://www.w3.org/2000/svg" 
 													 width="16" 

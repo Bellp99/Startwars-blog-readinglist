@@ -5,28 +5,36 @@ export const VehicleProperties = ({ singlevehicle }) => {
 
     const {
         name,
-        birth_year,
-        gender,
-        height,
-        mass,
-        hair_color,
-        eye_color,
-        skin_color,
-        homeworld,
+        created,
+        edited,
+        consumables,
+        cargo_capacity,
+        passengers,
+        max_atmosphering_speed,
+        crew,
+        length,
+        model,
+        cost_in_credits,
+        manufacturer,
+        vehicle_class
     } = singlevehicle;
 
     return (
         <div className="card p-4 shadow-sm">
             <h3 className="text-danger">{name}</h3>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item"><strong>Birth Year:</strong> {birth_year}</li>
-                <li className="list-group-item"><strong>Gender:</strong> {gender}</li>
-                <li className="list-group-item"><strong>Height:</strong> {height} cm</li>
-                <li className="list-group-item"><strong>Mass:</strong> {mass} kg</li>
-                <li className="list-group-item"><strong>Hair Color:</strong> {hair_color}</li>
-                <li className="list-group-item"><strong>Eye Color:</strong> {eye_color}</li>
-                <li className="list-group-item"><strong>Skin Color:</strong> {skin_color}</li>
-                <li className="list-group-item"><strong>Homeworld:</strong> {homeworld}</li>
+                <li className="list-group-item"><strong>Created:</strong> {created}</li>
+                <li className="list-group-item"><strong>Edited:</strong> {edited}</li>
+                <li className="list-group-item"><strong>Consumables:</strong> {consumables} </li>
+                <li className="list-group-item"><strong>Cargo capacity:</strong> {cargo_capacity} </li>
+                <li className="list-group-item"><strong>Passengers:</strong> {passengers}</li>
+                <li className="list-group-item"><strong>Max atmosphering spedd:</strong> {max_atmosphering_speed}</li>
+                <li className="list-group-item"><strong>Crew:</strong> {crew}</li>
+                <li className="list-group-item"><strong>Length:</strong> {length}</li>
+                <li className="list-group-item"><strong>Model:</strong> {model}</li>
+                <li className="list-group-item"><strong>Cost in credits:</strong> {cost_in_credits}</li>
+                <li className="list-group-item"><strong>Manufacturer:</strong> {manufacturer}</li>
+                <li className="list-group-item"><strong>Vehicle class:</strong> {vehicle_class}</li>
             </ul>
         </div>
     );
